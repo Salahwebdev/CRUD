@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styel.css">
+</head>
+
+<body>
+
+
+    <div class="container ">
+        <h1 class="text-center ">System Management Store</h1>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-6">
+                <label for="productName"> Product Name : </label>
+                <input id="productName" oninput="validateInputs(this)" type="text" class="form-control my-3" />
+                <div id="alert" class="alert alert-danger d-none py-0 text-capitalize"> Product Name Must starts with
+                    capital letter</div>
+
+                <label for="productPrice"> Product Price : </label>
+                <input oninput="validateInputs(this)" id="productPrice" type="number" class="form-control my-3" />
+                <div id="alert" class="alert alert-danger d-none py-0 text-capitalize"> Product Name Must starts with
+                    capital letter</div>
+                <label for="productCat"> Product Cat : </label>
+                <input id="productCat" type="text" class="form-control my-3" />
+                <div id="alert" class="alert alert-danger d-none py-0 text-capitalize"> Product Name Must starts with
+                    capital letter</div>
+                <label for="productDesc"> Product Desc : </label>
+                <textarea oninput="validateInputs(this)" type="text" id="productDesc"
+                    class="form-control  mb-2"></textarea>
+                <div id="alert" class="alert alert-danger d-none py-0 text-capitalize"> Product Name Must starts with
+                    capital letter</div>
+                <label for="productImg"> Product Img : </label>
+                <input id="productImg" type="file" class="form-control my-3" />
+                <div id="alert" class="alert alert-danger d-none py-0 text-capitalize"> Product Name Must starts with
+                    capital letter</div>
+            </div>
+            <div class="d-flex flex-column w-50 justify-content-center " role="search">
+                <button id="addBtn" class="btn btn-outline-info px-3 mb-2 mt-5" onclick="addProducts()">Add Product</button>
+                <button id="updateBtn" class="btn btn-outline-secondary d-none px-3 mb-2"
+                    onclick="updateProdssucts()">Update Product</button>
+    
+                <input id="search" oninput="search()" class="form-control  me-2" type="text"
+                    placeholder="Search By Name ...." />
+            </div>
+        </div>
+
+
+
+      
+
+    </div>
+
+
+    <div class="container">
+        <div id="rowData" class="row">
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
